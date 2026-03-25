@@ -1,0 +1,170 @@
+/* ============================================
+   JOYA TOURS PERÚ - ESTILOS NOSOTROS Y CONTACTO
+   Importa estilos principales y agrega específicos
+   ============================================ */
+
+@import url('styles.css');
+
+/* =========================
+   HERO NOSOTROS
+   ========================= */
+.hero-nosotros {
+    height: 50vh; /* Más angosto verticalmente (40% de la altura de la ventana) */
+    min-height: 300px; /* Altura mínima */
+    max-height: 400px; /* Altura máxima */
+    width: 100%;
+    background: linear-gradient(rgba(13, 86, 117, 0.7), rgba(4, 76, 114, 0.8)),
+                url('../public/image/nosotros-portada.png'); /* Imagen de portada */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end; /* Alinea el contenido al fondo */
+    padding: 0 5%;
+    margin-top: 0px; /* Espacio para el header (entre el menu y fondo) */
+    position: relative;
+}
+
+.hero-nosotros-content {
+    padding-bottom: 3rem; /* Espacio desde el fondo */
+    padding-left: 2rem;
+    color: white;
+    max-width: 600px;
+}
+
+.hero-nosotros-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    line-height: 1.2;
+}
+
+.hero-nosotros-content p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    margin: 0;
+}
+
+/* Estilos específicos adicionales para Nosotros */
+.nosotros-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.nosotros-text h3 {
+    color: #0d5675;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.nosotros-text p {
+    margin-bottom: 1.5rem;
+    color: #555;
+    line-height: 1.9;
+}
+
+.mvv-card {
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+    border-left: 5px solid #f2aa21;
+    margin-bottom: 1.5rem;
+}
+
+.mvv-card h4 {
+    color: #0d5675;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.mvv-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mvv-card li {
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    position: relative;
+}
+
+.mvv-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #39b671;
+    font-weight: bold;
+}
+
+/* Estilos específicos de Contacto */
+.contacto-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contacto-info {
+    background: linear-gradient(135deg, #0d5675, #044c72);
+    padding: 3rem;
+    border-radius: 20px;
+    color: white;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: start;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.contacto-icon {
+    font-size: 1.8rem;
+    color: #f2aa21;
+    min-width: 35px;
+}
+
+form {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Responsive para Nosotros y Contacto */
+@media (max-width: 768px) {
+    .hero-nosotros {
+        height: 35vh;
+        min-height: 250px;
+        margin-top: 0; /* Sin espacio adicional en móvil */
+    }
+
+    .hero-nosotros-content {
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+    }
+
+    .hero-nosotros-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-nosotros-content p {
+        font-size: 1.1rem;
+    }
+
+    .nosotros-content,
+    .contacto-container {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
